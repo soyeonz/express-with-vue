@@ -1,0 +1,21 @@
+<div id="app">
+    <my-component></my-component>
+    <your-component></your-component>
+</div>
+
+<script>
+Vue.component('my-component',{
+    template: '<div><h5>complex markup</h5><ul><li><button>can you figure this syntax out?</button></li></ul></div>'
+});
+
+Vue.component('your-component',{
+    template: '<div><span style="font-size:1.2em;"><button>{{message}}</button></span></div>'
+});
+
+new Vue({
+    el: '#app',
+    data: {
+        message: 'click this button'
+    }
+});
+</script>
